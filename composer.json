@@ -1,5 +1,5 @@
 {
-  "name": "bizley/quill",
+  "name": "jakabj16/quill",
   "description": "Quill editor implementation for Yii 2.",
   "type": "yii2-extension",
   "keywords": ["yii2","quill","wysiwyg","widget","editor"],
