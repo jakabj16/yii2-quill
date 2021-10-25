@@ -286,6 +286,14 @@ class Quill extends InputWidget
         $this->registerClientScript();
 
         if ($this->hasModel()) {
+            if (isset($this->options['name'])) {
+                return Html::hiddenInput(
+                        $this->options['name'], $this->attribute, ['id' => $this->_fieldId]
+                    ) . Html::tag(
+                        $this->tag, $this->model->{$this->attribute}, $this->options
+                    );
+            }
+
             return Html::activeHiddenInput(
                     $this->model, $this->attribute, ['id' => $this->_fieldId]
                 ) . Html::tag(
